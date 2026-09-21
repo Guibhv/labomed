@@ -1,2067 +1,1064 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
-
 <head>
-
-  <meta charset="UTF-8">
-
-  <meta name="google-site-verification" content="v7DahLo3ARwyGwMt_riVENrDsLaJVDGPTe8HZuerNWk" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>LABOMED - Laboratório de Análises Clínicas | Curaçá-BA</title>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LABOMED - Laboratório de Análises Clínicas | Curaçá-BA</title>
 <meta name="description" content="LABOMED - Sua saúde em 1º lugar! Exames laboratoriais com precisão, agilidade e confiança em Curaçá-BA.">
-
-
-
-<!-- URL canônica -->
-
 <link rel="canonical" href="https://labomed-eta.vercel.app/">
-
 <meta name="robots" content="index, follow">
 
-
-
 <!-- Open Graph -->
-
 <meta property="og:type" content="website">
-
 <meta property="og:locale" content="pt_BR">
-
 <meta property="og:url" content="https://labomed-eta.vercel.app/">
-
 <meta property="og:title" content="LABOMED - Laboratório de Análises Clínicas | Curaçá-BA">
-
 <meta property="og:description" content="Sua saúde em 1º lugar! Exames laboratoriais com precisão, agilidade e confiança em Curaçá-BA.">
 
-
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
-
   :root{
-
     --red: #D31C24;
-
     --red-dark: #9E0E14;
-
+    --red-soft: rgba(211, 28, 36, 0.08);
     --ink: #111111;
-
     --ink-soft: #1A1A1A;
-
     --white: #FFFFFF;
-
-    --cream: #F7F4EF;
-
-    --panel: #F9F9FB;
-
+    --cream: #F8F6F2;
+    --panel: #F4F4F7;
     --whatsapp: #25D366;
-
-    --line: #E7E2D8;
-
-    --muted: #6B6560;
-
+    --line: #E5E0D8;
+    --muted: #625D58;
     --display: 'Plus Jakarta Sans', sans-serif;
-
     --body: 'Inter', sans-serif;
-
     --mono: 'JetBrains Mono', monospace;
-
-    --radius: 18px;
-
-    --shadow-sm: 0 2px 10px rgba(17,17,17,0.06);
-
-    --shadow-md: 0 12px 32px rgba(17,17,17,0.10);
-
+    --radius: 20px;
+    --shadow-sm: 0 4px 14px rgba(17,17,17,0.04);
+    --shadow-md: 0 14px 36px rgba(17,17,17,0.08);
+    --shadow-lg: 0 22px 48px rgba(17,17,17,0.12);
     --shadow-red: 0 10px 28px rgba(211,28,36,0.28);
-
   }
-
-
 
   *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
-
-  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
-
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%;width:100%;overflow-x:hidden;}
   body{
-
     font-family:var(--body);
-
     color:var(--ink);
-
     background:var(--white);
-
     line-height:1.6;
-
     width:100%;
-
     overflow-x:hidden;
-
     -webkit-font-smoothing:antialiased;
-
   }
-
-  html{width:100%;overflow-x:hidden;}
-
   img,svg{display:block;max-width:100%;}
-
   a{color:inherit;text-decoration:none;}
-
   ul{list-style:none;}
-
   button{font-family:inherit;cursor:pointer;border:none;background:none;}
-
   section{position:relative;}
-
   .container{width:100%;max-width:1180px;margin:0 auto;padding:0 24px;}
-
   h1,h2,h3{font-family:var(--display);line-height:1.15;letter-spacing:-0.02em;}
-
-
 
   ::selection{background:var(--red);color:var(--white);}
 
-
-
-  /* focus visibility */
-
+  /* Focus visibility */
   a:focus-visible, button:focus-visible, input:focus-visible{
-
     outline:3px solid var(--red);
-
     outline-offset:3px;
-
     border-radius:6px;
-
   }
-
-
 
   @media (prefers-reduced-motion: reduce){
-
     *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important;}
-
   }
 
-
-
-  /* ---------- eyebrow / kicker ---------- */
-
+  /* ---------- Eyebrow / Kicker ---------- */
   .kicker{
-
     display:inline-flex;align-items:center;gap:8px;
-
     font-family:var(--mono);
-
     font-size:12.5px;
-
     letter-spacing:0.12em;
-
     text-transform:uppercase;
-
     color:var(--red);
-
-    font-weight:500;
-
+    font-weight:600;
   }
-
   .kicker::before{
-
     content:"";
-
-    width:7px;height:7px;border-radius:50%;
-
+    width:8px;height:8px;border-radius:50%;
     background:var(--red);
-
-    box-shadow:0 0 0 4px rgba(211,28,36,0.15);
-
+    box-shadow:0 0 0 4px rgba(211,28,36,0.18);
   }
-
-
 
   /* ---------- NAVBAR ---------- */
-
   .navbar{
-
     position:fixed;top:0;left:0;right:0;
-
     z-index:1000;
-
-    background:rgba(255,255,255,0.82);
-
-    backdrop-filter:blur(14px);
-
-    -webkit-backdrop-filter:blur(14px);
-
+    background:rgba(255,255,255,0.88);
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
     border-bottom:1px solid transparent;
-
     transition:border-color .3s ease, box-shadow .3s ease;
-
   }
-
   .navbar.scrolled{
-
     border-bottom-color:var(--line);
-
-    box-shadow:0 4px 20px rgba(17,17,17,0.05);
-
+    box-shadow:0 4px 20px rgba(17,17,17,0.06);
   }
-
   .nav-inner{
-
     display:flex;align-items:center;justify-content:space-between;
-
     height:76px;
-
   }
-
   .nav-brand{display:flex;align-items:center;gap:10px;}
-
   .nav-brand svg{width:42px;height:42px;flex-shrink:0;}
-
-  .nav-brand-text{font-family:var(--display);font-weight:800;font-size:19px;letter-spacing:-0.01em;}
-
+  .nav-brand-text{font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-0.01em;}
   .nav-brand-text span{color:var(--red);}
-
   .nav-links{
-
     display:flex;align-items:center;gap:36px;
-
     position:fixed;top:0;left:50%;
-
     transform:translateX(-50%);
-
     height:76px;
-
     z-index:1001;
-
   }
-
   .nav-links a{
-
     font-size:14.5px;font-weight:600;color:var(--ink-soft);
-
     position:relative;padding:6px 0;
-
   }
-
   .nav-links a::after{
-
-    content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--red);
-
+    content:"";position:absolute;left:0;bottom:0;width:0;height:2.5px;background:var(--red);
+    border-radius:2px;
     transition:width .25s ease;
-
   }
-
   .nav-links a:hover::after{width:100%;}
-
   .nav-cta{
-
     display:inline-flex;align-items:center;gap:8px;
-
     background:var(--whatsapp);color:var(--white);
-
-    padding:11px 20px;border-radius:999px;
-
+    padding:11px 22px;border-radius:999px;
     font-weight:700;font-size:14px;
-
     box-shadow:0 6px 18px rgba(37,211,102,0.35);
-
     transition:transform .2s ease, box-shadow .2s ease;
-
     position:relative;
-
   }
-
   .nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(37,211,102,0.45);}
-
   .nav-cta svg{width:17px;height:17px;}
-
   .nav-toggle{display:none;flex-direction:column;gap:5px;width:28px;}
-
   .nav-toggle span{height:2.5px;width:100%;background:var(--ink);border-radius:2px;transition:.3s;}
-
   .nav-cta-mobile{display:none;}
-
   body.menu-open .hero-visual{display:none !important;}
-
   body.menu-open main,
-
   body.menu-open footer,
-
   body.menu-open .wa-float{display:none !important;}
 
-
-
   /* ---------- HERO ---------- */
-
   .hero{
-
     padding:160px 0 120px;
-
     background:
-
       radial-gradient(ellipse 900px 500px at 85% -10%, rgba(211,28,36,0.08), transparent 60%),
-
       var(--cream);
-
     position:relative;
-
     overflow:hidden;
-
   }
-
   .hero::before{
-
     content:"";
-
     position:absolute;
-
     right:-120px;top:-80px;
-
     width:520px;height:520px;
-
     background:radial-gradient(circle, rgba(211,28,36,0.06) 0%, transparent 70%);
-
     border-radius:50%;
-
   }
-
   .hero-grid{
-
     display:grid;grid-template-columns:1.05fr 0.95fr;
-
     gap:60px;align-items:center;
-
   }
-
   .hero-eyebrow{margin-bottom:22px;}
-
   .hero h1{
-
     font-size:clamp(2.1rem, 4.2vw, 3.4rem);
-
     font-weight:800;
-
     color:var(--ink);
-
     margin-bottom:22px;
-
   }
-
   .hero h1 .accent{color:var(--red);position:relative;white-space:nowrap;}
-
   .hero-sub{
-
     font-size:17px;color:var(--muted);max-width:520px;margin-bottom:36px;
-
   }
-
   .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:52px;}
-
   .btn{
-
     display:inline-flex;align-items:center;justify-content:center;gap:9px;
-
     padding:16px 28px;border-radius:12px;
-
     font-weight:700;font-size:15px;
-
     transition:transform .22s cubic-bezier(.2,.9,.3,1.3), box-shadow .25s ease, background .2s ease;
-
   }
-
   .btn svg{width:18px;height:18px;flex-shrink:0;}
-
   .btn-primary{
-
     background:var(--red);color:var(--white);
-
     box-shadow:var(--shadow-red);
-
   }
-
   .btn-primary:hover{background:var(--red-dark);transform:translateY(-3px) scale(1.015);box-shadow:0 16px 34px rgba(211,28,36,0.36);}
-
   .btn-outline{
-
     background:var(--white);color:var(--ink);
-
     border:1.5px solid var(--line);
-
   }
-
   .btn-outline:hover{border-color:var(--ink);transform:translateY(-3px);box-shadow:var(--shadow-sm);}
 
-
-
   .hero-stats{display:flex;gap:34px;flex-wrap:wrap;}
-
   .hero-stat b{
-
     display:block;font-family:var(--display);font-size:26px;font-weight:800;color:var(--ink);
-
   }
-
   .hero-stat span{font-size:12.5px;color:var(--muted);font-weight:600;}
 
-
-
-  /* hero visual */
-
+  /* Hero Visual */
   .hero-visual{position:relative;height:520px;width:100%;}
-
   .hero-blob{
-
     position:absolute;top:0;right:0;bottom:0;left:0;
-
     background:linear-gradient(155deg, #1A1A1A 0%, #2b2b2b 100%);
-
     border-radius:32px;
-
     overflow:hidden;
-
     box-shadow:var(--shadow-md);
-
   }
-
   .hero-blob::after{
-
     content:"";
-
     position:absolute;top:0;right:0;bottom:0;left:0;
-
     background:
-
       radial-gradient(circle at 30% 20%, rgba(211,28,36,0.35), transparent 45%),
-
       radial-gradient(circle at 80% 80%, rgba(211,28,36,0.18), transparent 50%);
-
   }
-
   .hero-drop-big{
-
     position:absolute;top:50%;left:50%;
-
     transform:translate(-50%,-50%);
-
     width:220px;height:220px;
-
     opacity:0.9;
-
     animation:floatDrop 5s ease-in-out infinite;
-
   }
-
   @keyframes floatDrop{
-
     0%,100%{transform:translate(-50%,-52%) rotate(0deg);}
-
     50%{transform:translate(-50%,-48%) rotate(3deg);}
-
   }
-
   .float-card{
-
     position:absolute;
-
     background:var(--white);
-
     border-radius:14px;
-
     padding:14px 18px;
-
     display:flex;align-items:center;gap:12px;
-
     box-shadow:var(--shadow-md);
-
     font-size:13.5px;font-weight:700;
-
     animation:floatCard 4.5s ease-in-out infinite;
-
   }
-
   .float-card .ic{
-
     width:38px;height:38px;border-radius:10px;
-
     display:flex;align-items:center;justify-content:center;
-
     background:rgba(211,28,36,0.1);color:var(--red);
-
     flex-shrink:0;
-
   }
-
   .float-card .ic svg{width:20px;height:20px;}
-
   .float-card span{color:var(--muted);font-weight:500;font-size:11.5px;display:block;}
-
   .fc-1{top:6%;left:-6%;animation-delay:0s;}
-
   .fc-2{bottom:10%;right:-8%;animation-delay:1.2s;}
-
   .fc-3{bottom:-4%;left:16%;animation-delay:2.1s;}
-
   .float-card{max-width:78vw;}
-
   @keyframes floatCard{
-
     0%,100%{transform:translateY(0);}
-
     50%{transform:translateY(-12px);}
-
   }
 
-
-
-  /* ---------- reveal ---------- */
-
+  /* ---------- Scroll Reveal ---------- */
   .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1);}
-
   .reveal.in{opacity:1;transform:translateY(0);}
-
   .reveal-delay-1{transition-delay:.08s;}
-
   .reveal-delay-2{transition-delay:.16s;}
-
   .reveal-delay-3{transition-delay:.24s;}
-
   .reveal-delay-4{transition-delay:.32s;}
 
-
-
-  /* ---------- section heading ---------- */
-
+  /* ---------- Section Heading ---------- */
   .section-head{max-width:640px;margin-bottom:56px;}
-
   .section-head h2{
-
     font-size:clamp(1.7rem, 3vw, 2.4rem);
-
     font-weight:800;margin-top:14px;
-
   }
-
   .section-head p{color:var(--muted);font-size:16px;margin-top:14px;}
-
   .section-pad{padding:110px 0;}
 
-
-
   /* ---------- DIFERENCIAIS ---------- */
-
   .diff-grid{
-
     display:grid;grid-template-columns:repeat(4,1fr);gap:22px;
-
   }
-
   .diff-card{
-
     background:var(--white);
-
     border:1px solid var(--line);
-
     border-radius:var(--radius);
-
     padding:32px 26px;
-
     transition:transform .35s cubic-bezier(.2,.8,.3,1.2), box-shadow .35s ease, border-color .3s ease;
-
   }
-
   .diff-card:hover{
-
-    transform:translateY(-10px) rotateX(2deg);
-
-    box-shadow:0 22px 40px rgba(17,17,17,0.12);
-
+    transform:translateY(-10px);
+    box-shadow:var(--shadow-lg);
     border-color:transparent;
-
   }
-
   .diff-ic{
-
     width:54px;height:54px;border-radius:14px;
-
     background:var(--ink);color:var(--white);
-
     display:flex;align-items:center;justify-content:center;
-
     margin-bottom:20px;
-
     transition:background .3s ease;
-
   }
-
   .diff-card:hover .diff-ic{background:var(--red);}
-
   .diff-ic svg{width:26px;height:26px;}
-
   .diff-card h3{font-size:17.5px;font-weight:700;margin-bottom:10px;}
-
   .diff-card p{font-size:14px;color:var(--muted);}
 
-
-
-  /* ---------- EQUIPE ---------- */
-
+  /* ---------- EQUIPE (MELHORADO) ---------- */
   .team-grid{
-
-    display:grid;grid-template-columns:repeat(2,1fr);gap:28px;
-
-    max-width:760px;
-
+    display:grid;grid-template-columns:repeat(2,1fr);gap:32px;
+    max-width:820px;margin:0 auto;
   }
-
   .team-card{
-
     background:var(--white);
-
     border:1px solid var(--line);
-
-    border-radius:var(--radius);
-
+    border-radius:24px;
     overflow:hidden;
-
-    transition:transform .35s cubic-bezier(.2,.8,.3,1.2), box-shadow .35s ease;
-
+    box-shadow:var(--shadow-sm);
+    transition:transform .35s cubic-bezier(.2,.8,.3,1.2), box-shadow .35s ease, border-color .3s ease;
+    display:flex;
+    flex-direction:column;
   }
-
   .team-card:hover{
-
     transform:translateY(-8px);
-
-    box-shadow:0 22px 40px rgba(17,17,17,0.12);
-
+    box-shadow:var(--shadow-lg);
+    border-color:rgba(211,28,36,0.25);
   }
-
   .team-photo-wrap{
-
+    position:relative;
     width:100%;aspect-ratio:3/4;overflow:hidden;background:var(--panel);
-
   }
-
-  .team-photo-wrap img{width:100%;height:100%;object-fit:cover;display:block;}
-
-  .team-info{padding:22px 22px 26px;}
-
-  .team-info .tag{
-
-    font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;
-
-    color:var(--red);text-transform:uppercase;font-weight:600;
-
+  .team-photo-wrap img{
+    width:100%;height:100%;object-fit:cover;display:block;
+    transition:transform .5s ease;
   }
-
-  .team-info h3{font-size:18px;font-weight:700;margin-top:8px;letter-spacing:-0.01em;}
-
-  .team-info p{font-size:13.5px;color:var(--muted);margin-top:8px;line-height:1.6;}
-
+  .team-card:hover .team-photo-wrap img{
+    transform:scale(1.04);
+  }
+  /* Tag Flutuante sobre a foto */
+  .team-photo-wrap .badge-tag{
+    position:absolute;
+    top:16px; left:16px;
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+    color:var(--red);
+    font-family:var(--mono);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    padding:6px 14px;
+    border-radius:999px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.12);
+    border:1px solid rgba(255,255,255,0.6);
+  }
+  .team-info{
+    padding:26px 24px;
+    background:var(--white);
+    flex-grow:1;
+  }
+  .team-info h3{font-size:19px;font-weight:800;color:var(--ink);letter-spacing:-0.01em;}
+  .team-info p{font-size:14px;color:var(--muted);margin-top:10px;line-height:1.6;}
+  
   @media (max-width:640px){
-
-    .team-grid{grid-template-columns:1fr;max-width:340px;margin:0 auto;}
-
+    .team-grid{grid-template-columns:1fr;max-width:360px;margin:0 auto;}
   }
-
-
 
   /* ---------- EXAMES ---------- */
-
   .exames-section{background:var(--panel);}
-
   .exam-search{
-
-    position:relative;max-width:460px;margin-bottom:44px;
-
+    position:relative;max-width:480px;margin-bottom:44px;
   }
-
   .exam-search input{
-
-    width:100%;padding:16px 20px 16px 50px;
-
-    border-radius:12px;border:1.5px solid var(--line);
-
-    font-size:16px;font-family:var(--body);
-
+    width:100%;padding:16px 20px 16px 52px;
+    border-radius:14px;border:1.5px solid var(--line);
+    font-size:15.5px;font-family:var(--body);
     background:var(--white);
-
+    box-shadow:var(--shadow-sm);
     transition:border-color .2s ease, box-shadow .2s ease;
-
     -webkit-appearance:none;appearance:none;
-
   }
-
   .exam-search input:focus{border-color:var(--red);box-shadow:0 0 0 4px rgba(211,28,36,0.12);outline:none;}
-
   .exam-search svg{
-
     position:absolute;left:18px;top:50%;transform:translateY(-50%);
-
-    width:19px;height:19px;color:var(--muted);
-
+    width:20px;height:20px;color:var(--muted);
   }
-
   .exam-grid{
-
-    display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
-
+    display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
   }
-
   .exam-card{
-
     background:var(--white);border:1px solid var(--line);
-
-    border-radius:14px;padding:22px 20px;
-
+    border-radius:16px;padding:24px 20px;
+    box-shadow:var(--shadow-sm);
     transition:all .25s ease;
-
   }
-
-  .exam-card:hover{border-color:var(--red);box-shadow:var(--shadow-sm);transform:translateY(-3px);}
-
+  .exam-card:hover{border-color:var(--red);box-shadow:var(--shadow-md);transform:translateY(-4px);}
   .exam-card .tag{
-
     font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;
-
     color:var(--red);text-transform:uppercase;font-weight:600;
-
   }
-
-  .exam-card h4{font-size:15.5px;font-weight:700;margin-top:8px;}
-
-  .exam-card p{font-size:12.5px;color:var(--muted);margin-top:6px;}
-
+  .exam-card h4{font-size:16px;font-weight:700;margin-top:8px;}
+  .exam-card p{font-size:13px;color:var(--muted);margin-top:6px;}
   .exam-empty{
-
     display:none;text-align:center;padding:50px 0;color:var(--muted);font-size:15px;
-
   }
-
-
 
   /* ---------- LOCALIZAÇÃO ---------- */
-
   .loc-wrap{
-
     display:grid;grid-template-columns:1fr 1fr;
-
     gap:0;
-
     border-radius:28px;overflow:hidden;
-
-    box-shadow:var(--shadow-md);
-
+    box-shadow:var(--shadow-lg);
   }
-
   .loc-info{
-
     background:var(--ink);color:var(--white);
-
     padding:56px 48px;
-
     display:flex;flex-direction:column;justify-content:center;gap:34px;
-
   }
-
   .loc-info .kicker{color:#ff8f8f;}
-
   .loc-info .kicker::before{background:#ff8f8f;box-shadow:0 0 0 4px rgba(255,143,143,0.18);}
-
   .loc-info h2{color:var(--white);font-size:1.9rem;margin-top:12px;}
-
   .loc-block{display:flex;gap:16px;align-items:flex-start;}
-
   .loc-block .ic{
-
     width:44px;height:44px;border-radius:12px;background:rgba(211,28,36,0.18);
-
     display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#ff5a5a;
-
   }
-
   .loc-block .ic svg{width:21px;height:21px;}
-
   .loc-block h4{font-size:15px;font-weight:700;margin-bottom:4px;}
-
   .loc-block p{font-size:14px;color:#c9c9c9;line-height:1.7;}
-
-  .loc-hours-row{display:flex;justify-content:space-between;font-size:13.5px;padding:6px 0;border-bottom:1px dashed rgba(255,255,255,0.12);}
-
+  .loc-hours-row{display:flex;justify-content:space-between;font-size:13.5px;padding:7px 0;border-bottom:1px dashed rgba(255,255,255,0.12);}
   .loc-hours-row span:first-child{color:#c9c9c9;}
-
   .loc-hours-row span:last-child{font-weight:600;}
-
   .loc-map{
-
     position:relative;min-height:420px;
-
     background:
-
       linear-gradient(rgba(17,17,17,0.55), rgba(17,17,17,0.15)),
-
       repeating-linear-gradient(45deg, #efe9dd 0 2px, #f7f4ef 2px 40px);
-
     display:flex;align-items:center;justify-content:center;
-
   }
-
   .loc-map-inner{
-
     text-align:center;color:var(--white);position:relative;z-index:2;
-
   }
-
   .loc-pin{
-
     width:64px;height:64px;border-radius:50%;background:var(--red);
-
     display:flex;align-items:center;justify-content:center;margin:0 auto 18px;
-
     box-shadow:0 0 0 10px rgba(211,28,36,0.18), var(--shadow-red);
-
     animation:pinPulse 2.4s ease-in-out infinite;
-
   }
-
   @keyframes pinPulse{
-
     0%,100%{box-shadow:0 0 0 10px rgba(211,28,36,0.18), var(--shadow-red);}
-
     50%{box-shadow:0 0 0 16px rgba(211,28,36,0.10), var(--shadow-red);}
-
   }
-
   .loc-pin svg{width:30px;height:30px;color:var(--white);}
-
   .loc-map-inner p{font-weight:700;margin-bottom:18px;font-size:15px;}
-
   .maps-btn{
-
     display:inline-flex;align-items:center;gap:9px;
-
     background:var(--white);color:var(--ink);
-
     padding:13px 24px;border-radius:999px;font-weight:700;font-size:14px;
-
-    transition:transform .2s ease;
-
+    transition:transform .2s ease, box-shadow .2s ease;
+    box-shadow:var(--shadow-md);
   }
-
-  .maps-btn:hover{transform:translateY(-3px);}
-
+  .maps-btn:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);}
   .maps-btn svg{width:17px;height:17px;color:var(--red);}
 
-
-
   /* ---------- FAQ ---------- */
-
   .faq-list{max-width:760px;}
-
   .faq-item{
-
     border-bottom:1px solid var(--line);
-
   }
-
   .faq-q{
-
     width:100%;display:flex;align-items:center;justify-content:space-between;
-
     gap:20px;padding:26px 4px;text-align:left;
-
     font-family:var(--display);font-weight:700;font-size:16.5px;
-
     color:var(--ink);
-
   }
-
   .faq-q .plus{
-
     width:30px;height:30px;border-radius:50%;border:1.5px solid var(--line);
-
     flex-shrink:0;position:relative;transition:transform .3s ease, background .3s ease, border-color .3s ease;
-
   }
-
   .faq-q .plus::before,.faq-q .plus::after{
-
     content:"";position:absolute;background:var(--ink);
-
     top:50%;left:50%;transform:translate(-50%,-50%);
-
     transition:transform .3s ease, background .3s ease;
-
   }
-
   .faq-q .plus::before{width:12px;height:2px;}
-
   .faq-q .plus::after{width:2px;height:12px;}
-
   .faq-item.open .faq-q .plus{background:var(--red);border-color:var(--red);transform:rotate(180deg);}
-
   .faq-item.open .faq-q .plus::before,.faq-item.open .faq-q .plus::after{background:var(--white);}
-
   .faq-item.open .faq-q .plus::after{transform:translate(-50%,-50%) rotate(90deg) scaleY(0);}
-
   .faq-a{
-
     max-height:0;overflow:hidden;transition:max-height .35s ease, padding .35s ease;
-
     font-size:14.5px;color:var(--muted);padding:0 4px;
-
   }
-
   .faq-item.open .faq-a{max-height:400px;padding:0 4px 26px;}
 
-
-
-  /* ---------- CTA final ---------- */
-
+  /* ---------- CTA Final ---------- */
   .cta-final{
-
     background:linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
-
     border-radius:32px;
-
     padding:64px 48px;
-
     text-align:center;
-
     color:var(--white);
-
     position:relative;overflow:hidden;
-
+    box-shadow:var(--shadow-red);
   }
-
   .cta-final::before{
-
     content:"";position:absolute;inset:0;
-
-    background:radial-gradient(circle at 20% 20%, rgba(255,255,255,0.12), transparent 45%);
-
+    background:radial-gradient(circle at 20% 20%, rgba(255,255,255,0.15), transparent 45%);
   }
-
   .cta-final h2{color:var(--white);font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:16px;}
-
-  .cta-final p{color:rgba(255,255,255,0.9);max-width:520px;margin:0 auto 32px;font-size:15.5px;}
-
+  .cta-final p{color:rgba(255,255,255,0.92);max-width:520px;margin:0 auto 32px;font-size:15.5px;}
   .cta-final .btn-outline{background:var(--white);color:var(--red);border:none;}
-
   .cta-final .btn-outline:hover{background:var(--ink);color:var(--white);}
 
-
-
   /* ---------- FOOTER ---------- */
-
   footer{background:var(--ink);color:#d8d8d8;padding:70px 0 28px;}
-
   .footer-grid{
-
     display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:50px;
-
     padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,0.08);
-
   }
-
   .footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
-
   .footer-brand svg{width:38px;height:38px;}
-
   .footer-brand-text{font-family:var(--display);font-weight:800;color:var(--white);font-size:18px;}
-
   .footer-col p{font-size:13.5px;line-height:1.8;color:#a8a8a8;}
-
   .footer-col h5{color:var(--white);font-size:13px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px;}
-
   .footer-col ul li{margin-bottom:10px;}
-
   .footer-col ul a{font-size:14px;color:#a8a8a8;transition:color .2s ease;}
-
   .footer-col ul a:hover{color:var(--white);}
-
   .social-row{display:flex;gap:10px;margin-top:16px;}
-
   .social-row a{
-
     width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.06);
-
     display:flex;align-items:center;justify-content:center;transition:background .2s ease, transform .2s ease;
-
   }
-
   .social-row a:hover{background:var(--red);transform:translateY(-3px);}
-
   .social-row svg{width:17px;height:17px;color:var(--white);}
-
   .footer-bottom{
-
     display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
-
     padding-top:26px;font-size:12.5px;color:#8a8a8a;
-
   }
-
   .footer-bottom a{color:#a8a8a8;}
-
   .footer-bottom a:hover{color:var(--white);}
 
-
-
-  /* ---------- WhatsApp floating ---------- */
-
+  /* ---------- WhatsApp Floating ---------- */
   .wa-float{
-
     position:fixed;bottom:26px;right:26px;z-index:999;
-
     width:60px;height:60px;border-radius:50%;
-
     background:var(--whatsapp);
-
     display:flex;align-items:center;justify-content:center;
-
     box-shadow:0 8px 24px rgba(37,211,102,0.45);
-
     animation:waPulse 2.6s ease-in-out infinite;
-
   }
-
   .wa-float svg{width:30px;height:30px;color:var(--white);}
-
   @keyframes waPulse{
-
     0%,100%{box-shadow:0 8px 24px rgba(37,211,102,0.45), 0 0 0 0 rgba(37,211,102,0.4);}
-
     50%{box-shadow:0 8px 24px rgba(37,211,102,0.45), 0 0 0 14px rgba(37,211,102,0);}
-
   }
-
   .wa-float:hover{transform:scale(1.08);}
 
-
-
-  /* ---------- responsive ---------- */
-
+  /* ---------- Responsive ---------- */
   @media (max-width:980px){
-
     .diff-grid{grid-template-columns:repeat(2,1fr);}
-
     .exam-grid{grid-template-columns:repeat(2,1fr);}
-
     .hero-grid{grid-template-columns:1fr;gap:70px;}
-
     .hero-visual{height:380px;order:-1;margin:0 auto;max-width:480px;width:100%;}
-
     .loc-wrap{grid-template-columns:1fr;}
-
     .nav-links{gap:26px;}
-
   }
-
   @media (max-width:760px){
-
     .nav-links{
-
       position:fixed;top:76px;left:0;right:0;bottom:0;
-
       height:auto;
-
       background:var(--white);
-
       flex-direction:column;align-items:flex-start;
-
       padding:30px 24px;gap:26px;
-
       transform:translateX(100%);
-
       transition:transform .35s ease;
-
       overflow-y:auto;
-
       z-index:999999;
-
       isolation:isolate;
-
     }
-
     .nav-links.open{transform:translateX(0);}
-
     .nav-links a{font-size:17px;}
-
     .nav-toggle{display:flex;position:relative;z-index:1001;}
-
     .nav-toggle span{transition:transform .3s ease, opacity .3s ease;transform-origin:center;}
-
     .nav-toggle.active span:nth-child(1){transform:translateY(7.5px) rotate(45deg);}
-
     .nav-toggle.active span:nth-child(2){opacity:0;}
-
     .nav-toggle.active span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg);}
-
     .nav-cta{display:none;}
-
     .nav-links .nav-cta-mobile{
-
       display:inline-flex !important;margin-top:10px;
-
     }
-
     .diff-grid{grid-template-columns:1fr;}
-
     .exam-grid{grid-template-columns:1fr;}
-
     .loc-info{padding:40px 26px;}
-
     .section-pad{padding:76px 0;}
-
     .hero{padding:120px 0 80px;}
-
     .hero-visual{height:320px;max-width:100%;width:100%;}
-
     .float-card{padding:11px 14px;font-size:12.5px;gap:10px;max-width:66vw;}
-
     .float-card .ic{width:32px;height:32px;}
-
     .float-card .ic svg{width:17px;height:17px;}
-
     .fc-1{left:0;top:4%;}
-
     .fc-2{right:0;bottom:6%;}
-
     .fc-3{left:8%;bottom:-6%;}
-
     .hero-drop-big{width:150px;height:150px;}
-
     .hero-stats{gap:22px;}
-
     .cta-final{padding:48px 26px;}
-
     .footer-grid{grid-template-columns:1fr;gap:36px;}
-
     .loc-map{min-height:320px;}
-
   }
-
   @media (max-width:400px){
-
     .container{padding:0 18px;}
-
     .hero h1{font-size:1.85rem;}
-
     .btn{padding:14px 22px;font-size:14px;width:100%;}
-
     .hero-actions{flex-direction:column;}
-
     .hero-actions .btn{width:100%;}
-
   }
-
 </style>
-
 </head>
-
 <body>
 
-
-
 <!-- ============ NAVBAR ============ -->
-
 <header class="navbar" id="navbar">
-
   <div class="container nav-inner">
-
     <a href="#inicio" class="nav-brand">
-
       <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-
         <circle cx="250" cy="250" r="230" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="4"/>
-
         <path d="M137,250 C160,285 210,310 260,305 C310,300 350,265 388,245 C370,260 330,280 290,282 C230,285 180,260 137,250 Z" fill="#111111"/>
-
         <path d="M250,140 C250,140 215,200 215,225 C215,244.33 230.67,260 250,260 C269.33,260 285,244.33 285,225 C285,200 250,140 250,140 Z" fill="#D31C24"/>
-
       </svg>
-
       <span class="nav-brand-text">LABO<span>MED</span></span>
-
     </a>
-
-
 
     <a href="https://wa.me/5574981394733" target="_blank" rel="noopener" class="nav-cta" id="navCtaDesktop">
-
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.47 1.29 4.93L2 22l5.29-1.38a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.13c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.13.11-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.82 2 .89 2.14.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.18 1.53 1.91 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.61-.07.17-.19.71-.83.9-1.11.19-.28.38-.24.63-.14.26.09 1.66.79 1.94.93.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
-
       Fale no WhatsApp
-
     </a>
 
-
-
     <button class="nav-toggle" id="navToggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
-
   </div>
-
 </header>
 
-
-
-<!-- Menu mobile fica FORA do header de propósito: um header com backdrop-filter
-
-     muda a área de referência de elementos position:fixed dentro dele, o que
-
-     espremia esse menu dentro da altura de 76px do cabeçalho. -->
-
 <nav class="nav-links" id="navLinks">
-
   <a href="#inicio">Início</a>
-
   <a href="#exames">Exames</a>
-
   <a href="#sobre">Sobre Nós</a>
-
   <a href="#equipe">Equipe</a>
-
   <a href="#localizacao">Localização</a>
-
   <a href="#contato">Contato</a>
-
   <a href="https://wa.me/5574981394733" target="_blank" rel="noopener" class="nav-cta nav-cta-mobile">
-
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.47 1.29 4.93L2 22l5.29-1.38a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.13c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.13.11-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.82 2 .89 2.14.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.18 1.53 1.91 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.61-.07.17-.19.71-.83.9-1.11.19-.28.38-.24.63-.14.26.09 1.66.79 1.94.93.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
-
     Fale no WhatsApp
-
   </a>
-
 </nav>
 
-
-
 <main>
-
 <!-- ============ HERO ============ -->
-
 <section class="hero" id="inicio">
-
   <div class="container hero-grid">
-
     <div>
-
       <div class="kicker reveal in">Laboratório de Análises Clínicas · Curaçá-BA</div>
-
       <h1 class="reveal in reveal-delay-1">Sua saúde em <span class="accent">1º lugar</span> com precisão, agilidade e confiança.</h1>
-
       <p class="hero-sub reveal in reveal-delay-2">Realize seus exames laboratoriais na LABOMED com equipamentos modernos, atendimento humanizado e entrega rápida de resultados.</p>
-
       <div class="hero-actions reveal in reveal-delay-3">
-
         <a href="https://wa.me/5574981394733" target="_blank" rel="noopener" class="btn btn-primary">
-
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.47 1.29 4.93L2 22l5.29-1.38a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.13c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.13.11-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.82 2 .89 2.14.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.18 1.53 1.91 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.61-.07.17-.19.71-.83.9-1.11.19-.28.38-.24.63-.14.26.09 1.66.79 1.94.93.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
-
           Agendar Exame / Tirar Dúvidas
-
         </a>
-
         <a href="#localizacao" class="btn btn-outline">
-
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.5-7-11.5A7 7 0 0 1 19 9.5C19 14.5 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
-
           Ver Localização
-
         </a>
-
       </div>
-
       <div class="hero-stats reveal in reveal-delay-4">
-
         <div class="hero-stat"><b>07h–17h</b><span>SEG A SEX</span></div>
-
         <div class="hero-stat"><b>+20</b><span>TIPOS DE EXAME</span></div>
-
         <div class="hero-stat"><b>100%</b><span>RESULTADOS PRECISOS</span></div>
-
       </div>
-
     </div>
-
-
 
     <div class="hero-visual reveal in reveal-delay-2">
-
       <div class="hero-blob">
-
         <svg class="hero-drop-big" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-
           <path d="M250,140 C250,140 215,200 215,225 C215,244.33 230.67,260 250,260 C269.33,260 285,244.33 285,225 C285,200 250,140 250,140 Z" fill="#D31C24" transform="scale(1.9) translate(-115,-95)"/>
-
         </svg>
-
       </div>
-
       <div class="float-card fc-1">
-
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l2-2 4 4L19 4l2 2-12 12z"/></svg></div>
-
         <div>Coleta Domiciliar<span>Comodidade para você</span></div>
-
       </div>
-
       <div class="float-card fc-2">
-
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-
         <div>Atendimento Rápido<span>Sem espera longa</span></div>
-
       </div>
-
       <div class="float-card fc-3">
-
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
-
         <div>Resultados Precisos<span>Tecnologia moderna</span></div>
-
       </div>
-
     </div>
-
   </div>
-
 </section>
-
-
 
 <!-- ============ DIFERENCIAIS ============ -->
-
 <section class="section-pad" id="sobre">
-
   <div class="container">
-
     <div class="section-head reveal">
-
       <div class="kicker">Por que escolher a LABOMED</div>
-
       <h2>Cuidado clínico com o rigor que sua saúde merece.</h2>
-
       <p>Unimos tecnologia de ponta a um atendimento próximo, para que cada exame seja uma experiência tranquila do início ao fim.</p>
-
     </div>
-
     <div class="diff-grid">
-
       <div class="diff-card reveal reveal-delay-1">
-
         <div class="diff-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></div>
-
         <h3>Atendimento Humanizado</h3>
-
         <p>Equipe atenciosa, pronta para explicar cada etapa e acolher você com respeito e paciência.</p>
-
       </div>
-
       <div class="diff-card reveal reveal-delay-2">
-
         <div class="diff-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
-
         <h3>Resultados Confiáveis</h3>
-
         <p>Processos rigorosos de controle de qualidade em cada etapa da análise clínica.</p>
-
       </div>
-
       <div class="diff-card reveal reveal-delay-3">
-
         <div class="diff-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
-
         <h3>Estrutura Moderna</h3>
-
         <p>Equipamentos atualizados e ambiente limpo e confortável para toda a família.</p>
-
       </div>
-
       <div class="diff-card reveal reveal-delay-4">
-
         <div class="diff-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21v-7a8 8 0 0 1 16 0v7"/><path d="M4 14h16"/></svg></div>
-
         <h3>Coletas Especializadas</h3>
-
         <p>Coleta domiciliar e atendimento a públicos especiais com todo cuidado necessário.</p>
-
       </div>
-
     </div>
-
   </div>
-
 </section>
 
-
-
-<!-- ============ EQUIPE ============ -->
-
+<!-- ============ EQUIPE (REFATORADO COM BADGE E HOVER) ============ -->
 <section class="section-pad exames-section" id="equipe">
-
   <div class="container">
-
     <div class="section-head reveal">
-
       <div class="kicker">Quem cuida de você</div>
-
       <h2>Nossa equipe de profissionais</h2>
-
       <p>Conheça os profissionais qualificados que fazem parte da LABOMED e cuidam da sua saúde com atenção e competência.</p>
-
     </div>
-
     <div class="team-grid">
-
       <div class="team-card reveal">
-
         <div class="team-photo-wrap">
-
+          <span class="badge-tag">Médica</span>
           <img src="fotos/dra-eveline.jpg" alt="Dra. Eveline Cerqueira, Médica na LABOMED" loading="lazy" width="600" height="800">
-
         </div>
-
         <div class="team-info">
-
-          <span class="tag">Médica</span>
-
           <h3>Dra. Eveline Cerqueira</h3>
-
           <p>Responsável pelo acompanhamento clínico e orientação médica dos pacientes da LABOMED.</p>
-
         </div>
-
       </div>
-
       <div class="team-card reveal reveal-delay-1">
-
         <div class="team-photo-wrap">
-
+          <span class="badge-tag">Neuropsicóloga</span>
           <img src="fotos/monica-loiola.jpg" alt="Mônica Loiola Bahia, Neuropsicóloga na LABOMED" loading="lazy" width="600" height="800">
-
         </div>
-
         <div class="team-info">
-
-          <span class="tag">Neuropsicóloga</span>
-
           <h3>Mônica Loiola Bahia</h3>
-
           <p>Atua na avaliação e no cuidado neuropsicológico, apoiando pacientes com atenção especializada.</p>
-
         </div>
-
       </div>
-
     </div>
-
   </div>
-
 </section>
-
-
 
 <!-- ============ EXAMES ============ -->
-
 <section class="section-pad exames-section" id="exames">
-
   <div class="container">
-
     <div class="section-head reveal">
-
       <div class="kicker">Nossos serviços</div>
-
       <h2>Principais exames disponíveis</h2>
-
       <p>Busque abaixo o exame que você precisa realizar. Nossa equipe está pronta para orientar sobre preparo e coleta.</p>
-
     </div>
-
-
 
     <div class="exam-search reveal">
-
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-
       <input type="text" id="examSearch" placeholder="Buscar exame (ex: glicemia, urina...)" aria-label="Buscar exame">
-
     </div>
-
-
 
     <div class="exam-grid" id="examGrid">
-
       <div class="exam-card reveal" data-name="hemograma completo">
-
         <span class="tag">Sangue</span>
-
         <h4>Hemograma Completo</h4>
-
         <p>Avaliação geral das células sanguíneas.</p>
-
       </div>
-
       <div class="exam-card reveal reveal-delay-1" data-name="glicemia">
-
         <span class="tag">Sangue</span>
-
         <h4>Glicemia</h4>
-
         <p>Controle e diagnóstico de diabetes.</p>
-
       </div>
-
       <div class="exam-card reveal reveal-delay-2" data-name="perfil lipidico colesterol triglicerideos">
-
         <span class="tag">Sangue</span>
-
         <h4>Perfil Lipídico</h4>
-
         <p>Colesterol total, HDL, LDL e triglicerídeos.</p>
-
       </div>
-
       <div class="exam-card reveal reveal-delay-3" data-name="exames hormonais tireoide">
-
         <span class="tag">Hormonal</span>
-
         <h4>Exames Hormonais</h4>
-
         <p>Tireoide, hormônios reprodutivos e mais.</p>
-
       </div>
-
       <div class="exam-card reveal" data-name="parasitologicos fezes">
-
         <span class="tag">Fezes</span>
-
         <h4>Parasitológicos</h4>
-
         <p>Investigação de parasitas intestinais.</p>
-
       </div>
-
       <div class="exam-card reveal reveal-delay-1" data-name="urina eas urocultura">
-
         <span class="tag">Urina</span>
-
         <h4>Exame de Urina (EAS)</h4>
-
         <p>Avaliação completa do trato urinário.</p>
-
       </div>
-
     </div>
-
     <p class="exam-empty" id="examEmpty">Nenhum exame encontrado. Fale com a gente pelo WhatsApp para verificar disponibilidade.</p>
-
   </div>
-
 </section>
-
-
 
 <!-- ============ LOCALIZAÇÃO ============ -->
-
 <section class="section-pad" id="localizacao">
-
   <div class="container">
-
     <div class="loc-wrap reveal">
-
       <div class="loc-info">
-
         <div>
-
           <div class="kicker">Onde estamos</div>
-
           <h2>Localização &amp; Horários</h2>
-
         </div>
 
-
-
         <div class="loc-block">
-
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.5-7-11.5A7 7 0 0 1 19 9.5C19 14.5 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></svg></div>
-
           <div>
-
             <h4>Endereço</h4>
-
             <p>Rua Coronel Militar Torres, 77 - Centro<br>Curaçá - BA, CEP 48980-000</p>
-
           </div>
-
         </div>
-
-
 
         <div class="loc-block">
-
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-
           <div style="width:100%">
-
             <h4>Horário de Funcionamento</h4>
-
             <div class="loc-hours-row"><span>Segunda a sexta · Manhã</span><span>07h às 12h</span></div>
-
             <div class="loc-hours-row"><span>Segunda a sexta · Tarde</span><span>14h às 17h</span></div>
-
             <div class="loc-hours-row" style="border-bottom:none;"><span>Sábado e domingo</span><span>Fechado</span></div>
-
           </div>
-
         </div>
-
       </div>
-
-
 
       <div class="loc-map">
-
         <div class="loc-map-inner">
-
           <div class="loc-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.5-7-11.5A7 7 0 0 1 19 9.5C19 14.5 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></svg></div>
-
           <p>Rua Coronel Militar Torres, 77<br>Centro, Curaçá - BA</p>
-
           <a href="https://www.google.com/maps/search/?api=1&query=Rua+Coronel+Militar+Torres+77+Centro+Curaça+BA" target="_blank" rel="noopener" class="maps-btn">
-
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 20l-5.5-2V4L9 6m0 14l6-2m-6 2V6m6 12l5.5 2V6L15 4m0 14V4m0 0L9 6"/></svg>
-
             Abrir no Google Maps
-
           </a>
-
         </div>
-
       </div>
-
     </div>
-
   </div>
-
 </section>
-
-
 
 <!-- ============ FAQ ============ -->
-
 <section class="section-pad" id="faq">
-
   <div class="container">
-
     <div class="section-head reveal">
-
       <div class="kicker">Dúvidas frequentes</div>
-
       <h2>Perguntas Frequentes</h2>
-
     </div>
-
     <div class="faq-list reveal">
-
       <div class="faq-item open">
-
         <button class="faq-q">
-
           Preciso estar em jejum?
-
           <span class="plus"></span>
-
         </button>
-
         <div class="faq-a"><p>Depende do exame solicitado. Alguns exigem jejum de 8 a 12 horas, outros não precisam. Nossa equipe informa o preparo correto no momento do agendamento.</p></div>
-
       </div>
-
       <div class="faq-item">
-
         <button class="faq-q">
-
           Como faço para pegar o resultado?
-
           <span class="plus"></span>
-
         </button>
-
         <div class="faq-a"><p>Os resultados podem ser retirados presencialmente no laboratório ou enviados digitalmente, conforme combinado no momento da coleta.</p></div>
-
       </div>
-
       <div class="faq-item">
-
         <button class="faq-q">
-
           Vocês atendem convênios ou apenas particular?
-
           <span class="plus"></span>
-
         </button>
-
         <div class="faq-a"><p>Atendemos tanto pacientes particulares quanto convênios credenciados. Entre em contato pelo WhatsApp para confirmar a cobertura do seu plano.</p></div>
-
       </div>
-
       <div class="faq-item">
-
         <button class="faq-q">
-
           É possível agendar coleta domiciliar?
-
           <span class="plus"></span>
-
         </button>
-
         <div class="faq-a"><p>Sim! Oferecemos coleta domiciliar para maior comodidade. Fale com nossa equipe para verificar a disponibilidade na sua região.</p></div>
-
       </div>
-
     </div>
-
   </div>
-
 </section>
-
-
 
 <!-- ============ CTA FINAL ============ -->
-
 <section class="section-pad" id="contato" style="padding-top:0;">
-
   <div class="container">
-
     <div class="cta-final reveal">
-
       <h2>Pronto para cuidar da sua saúde?</h2>
-
       <p>Fale agora com a nossa equipe e agende seu exame com quem entende que sua saúde vem em 1º lugar.</p>
-
       <a href="https://wa.me/5574981394733" target="_blank" rel="noopener" class="btn btn-outline">
-
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.47 1.29 4.93L2 22l5.29-1.38a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.13c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.13.11-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.82 2 .89 2.14.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.18 1.53 1.91 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.61-.07.17-.19.71-.83.9-1.11.19-.28.38-.24.63-.14.26.09 1.66.79 1.94.93.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
-
         Falar no WhatsApp agora
-
       </a>
-
     </div>
-
   </div>
-
 </section>
-
 </main>
 
-
-
 <!-- ============ FOOTER ============ -->
-
 <footer>
-
   <div class="container">
-
     <div class="footer-grid">
-
       <div class="footer-col">
-
         <div class="footer-brand">
-
           <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-
             <circle cx="250" cy="250" r="230" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="4"/>
-
             <path d="M137,250 C160,285 210,310 260,305 C310,300 350,265 388,245 C370,260 330,280 290,282 C230,285 180,260 137,250 Z" fill="#111111"/>
-
             <path d="M250,140 C250,140 215,200 215,225 C215,244.33 230.67,260 250,260 C269.33,260 285,244.33 285,225 C285,200 250,140 250,140 Z" fill="#D31C24"/>
-
           </svg>
-
           <span class="footer-brand-text">LABOMED</span>
-
         </div>
-
         <p>Laboratório de Análises Clínicas em Curaçá-BA. Sua saúde em 1º lugar, com precisão, agilidade e confiança.</p>
-
         <div class="social-row">
-
           <a href="https://instagram.com/laboratoriolabomed" target="_blank" rel="noopener" aria-label="Instagram LABOMED">
-
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-
           </a>
-
           <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook LABOMED">
-
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5H16l.4-3H13.5V8.3c0-.87.24-1.46 1.5-1.46H16.5V4.14C16.2 4.1 15.2 4 14 4c-2.5 0-4.2 1.53-4.2 4.33v2.17H7v3h2.8V21h3.7z"/></svg>
-
           </a>
-
         </div>
-
       </div>
 
-
-
       <div class="footer-col">
-
         <h5>Navegação</h5>
-
         <ul>
-
           <li><a href="#inicio">Início</a></li>
-
           <li><a href="#exames">Exames</a></li>
-
           <li><a href="#sobre">Sobre Nós</a></li>
-
           <li><a href="#equipe">Equipe</a></li>
-
           <li><a href="#localizacao">Localização</a></li>
-
         </ul>
-
       </div>
-
-
 
       <div class="footer-col">
-
         <h5>Contato</h5>
-
         <ul>
-
           <li><a href="https://wa.me/5574981394733" target="_blank" rel="noopener">WhatsApp: (74) 9 8139-4733</a></li>
-
           <li><a href="https://instagram.com/laboratoriolabomed" target="_blank" rel="noopener">@laboratoriolabomed</a></li>
-
           <li><span style="font-size:14px;color:#a8a8a8;">Rua Coronel Militar Torres, 77 - Centro, Curaçá - BA</span></li>
-
         </ul>
-
       </div>
-
     </div>
-
-
 
     <div class="footer-bottom">
-
       <span>© 2026 LABOMED - Laboratório de Análises Clínicas. Todos os direitos reservados.</span>
-
       <span>Resultados de exames não substituem avaliação médica presencial.</span>
-
     </div>
-
   </div>
-
 </footer>
 
-
-
 <!-- ============ WHATSAPP FLOAT ============ -->
-
 <a href="https://wa.me/5574981394733" target="_blank" rel="noopener" class="wa-float" aria-label="Fale conosco no WhatsApp">
-
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.47 1.29 4.93L2 22l5.29-1.38a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.13c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.13.11-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.82 2 .89 2.14.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.71 1.18 1.53 1.91 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.61-.07.17-.19.71-.83.9-1.11.19-.28.38-.24.63-.14.26.09 1.66.79 1.94.93.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
-
 </a>
 
-
-
 <script>
-
 (function(){
-
   // ---- Navbar scroll state ----
-
   var navbar = document.getElementById('navbar');
-
   window.addEventListener('scroll', function(){
-
     if(window.scrollY > 12){ navbar.classList.add('scrolled'); }
-
     else{ navbar.classList.remove('scrolled'); }
-
   });
-
-
 
   // ---- Mobile menu toggle ----
-
   var navToggle = document.getElementById('navToggle');
-
   var navLinks = document.getElementById('navLinks');
-
   function closeMenu(){
-
     navLinks.classList.remove('open');
-
     navToggle.classList.remove('active');
-
     document.body.classList.remove('menu-open');
-
     document.body.style.overflow = '';
-
   }
-
   function toggleMenu(){
-
     var willOpen = !navLinks.classList.contains('open');
-
     navLinks.classList.toggle('open');
-
     navToggle.classList.toggle('active');
-
     document.body.classList.toggle('menu-open', willOpen);
-
     document.body.style.overflow = willOpen ? 'hidden' : '';
-
   }
-
   navToggle.addEventListener('click', toggleMenu);
-
   navLinks.querySelectorAll('a').forEach(function(a){
-
     a.addEventListener('click', closeMenu);
-
   });
-
   window.addEventListener('resize', function(){
-
     if(window.innerWidth > 760){ closeMenu(); }
-
   });
-
-
 
   // ---- Scroll reveal (IntersectionObserver) ----
-
   var revealEls = document.querySelectorAll('.reveal');
-
   if('IntersectionObserver' in window){
-
     var io = new IntersectionObserver(function(entries){
-
       entries.forEach(function(entry){
-
         if(entry.isIntersecting){
-
           entry.target.classList.add('in');
-
           io.unobserve(entry.target);
-
         }
-
       });
-
     },{threshold:0.15, rootMargin:'0px 0px -40px 0px'});
-
     revealEls.forEach(function(el){ io.observe(el); });
-
   } else {
-
     revealEls.forEach(function(el){ el.classList.add('in'); });
-
   }
-
-
 
   // ---- Exam search filter ----
-
   var searchInput = document.getElementById('examSearch');
-
   var examCards = document.querySelectorAll('.exam-card');
-
   var examEmpty = document.getElementById('examEmpty');
-
   searchInput.addEventListener('input', function(){
-
     var q = searchInput.value.trim().toLowerCase();
-
     var visibleCount = 0;
-
     examCards.forEach(function(card){
-
       var name = card.getAttribute('data-name');
-
       var match = name.indexOf(q) !== -1;
-
       card.style.display = match ? '' : 'none';
-
       if(match) visibleCount++;
-
     });
-
     examEmpty.style.display = visibleCount === 0 ? 'block' : 'none';
-
   });
 
-
-
-  // ---- FAQ accordion (altura calculada dinamicamente) ----
-
+  // ---- FAQ accordion ----
   var faqItems = document.querySelectorAll('.faq-item');
-
   function setFaqHeight(item){
-
     var answer = item.querySelector('.faq-a');
-
     if(item.classList.contains('open')){
-
       answer.style.maxHeight = (answer.scrollHeight + 30) + 'px';
-
     } else {
-
       answer.style.maxHeight = '0px';
-
     }
-
   }
-
   faqItems.forEach(function(item){
-
     var q = item.querySelector('.faq-q');
-
     setFaqHeight(item);
-
     q.addEventListener('click', function(){
-
       var isOpen = item.classList.contains('open');
-
       faqItems.forEach(function(other){ other.classList.remove('open'); setFaqHeight(other); });
-
       if(!isOpen){ item.classList.add('open'); }
-
       setFaqHeight(item);
-
     });
-
   });
-
   window.addEventListener('resize', function(){
-
     faqItems.forEach(function(item){ setFaqHeight(item); });
-
   });
-
 })();
-
 </script>
-
 </body>
-
-</html> 
+</html>
